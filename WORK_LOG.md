@@ -33,6 +33,7 @@
 | 25.11.2026 | JavaScript: DOM и асинхронность | Описаны события, Promise, async/await и API | [d09260f](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/d09260fc5cbe819a4715608d0ca89fa676e18b0a) |
 | 25.11.2026 | JavaScript: OLAP и практика | Подготовлены архитектурные схемы и пять заданий | [4586e32](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/4586e32c08720d517babdbe4b5e99af66dd5b22c) |
 | 25.11.2026 | JavaScript: примеры кода | Добавлены обработка данных, шесть тестов, HTML-отчёт и локальный HTTP API; запуск не подтверждён | [80936dd](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/80936dd69f2628b47bc00c84b96ddf3daf88f2d1) |
+| 25.11.2026 | Адаптация материалов для новичков | Переработана глава о командной работе, дополнены простыми объяснениями 11 глав Git и JavaScript, обновлён главный README; исходный код сохранён | [309eaaa](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/309eaaad6d164bf0a5e4db5eea653cff687a7df5), [0efaaf7](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/0efaaf78d3c4bb598a8a732bad89527cd5cdc2a1) |
 
 ## Текущее состояние
 
