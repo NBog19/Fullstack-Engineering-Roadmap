@@ -12,7 +12,7 @@ createServer(async (req, res) => {
     const url = new URL(req.url, "http://127.0.0.1:3000");
     if (req.method !== "GET") return json(res, 405, { error: "Method not allowed" });
     if (url.pathname === "/") {
-      const html = await readFile(new URL("./report.html", import.meta.url));
+      const html = await readFile(new URL("../report.html", import.meta.url));
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       return res.end(html);
     }
