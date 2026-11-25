@@ -36,6 +36,7 @@
 | 25.11.2026 | Адаптация материалов для новичков | Переработана глава о командной работе, дополнены простыми объяснениями 11 глав Git и JavaScript, обновлён главный README; исходный код сохранён | [309eaaa](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/309eaaad6d164bf0a5e4db5eea653cff687a7df5), [0efaaf7](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/0efaaf78d3c4bb598a8a732bad89527cd5cdc2a1) |
 | 25.11.2026 | Упрощение работы через GitHub | Обновлены Workflow и Setup: создание проекта и работа с файлами через браузер | [d270eb2](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/d270eb2e71f640f8a05ecc5d4ed5bc48844f3972) |
 | 25.11.2026 | Переработка учебных глав | Переписаны 11 инструкций Git и JavaScript для читателя без опыта программирования; практика начинается с простых действий | [718d86e](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/718d86e27b1b5c9cf188dc31bf8e8ea01d32ae11) |
+| 25.11.2026 | Наглядные материалы | Добавлен справочник с 10 ссылками на официальные изображения GitHub, словарь из 22 терминов, карта технологий и ссылки в оглавлении; отображение изображений в браузере не проверялось | [70ac095](https://github.com/NBog19/Fullstack-Engineering-Roadmap/commit/70ac09539aeebfda771166345b421dd134bbb339) |
 
 ## Текущее состояние
 
