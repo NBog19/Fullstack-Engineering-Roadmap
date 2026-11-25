@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Учебный отчёт по продажам</title>
+<style>
+body{font:16px system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;color:#243044}
+form{display:flex;gap:12px;flex-wrap:wrap;align-items:end}label{display:grid;gap:4px}
+input,select,button{font:inherit;padding:8px}table{border-collapse:collapse;width:100%;margin-top:24px}
+th,td{padding:12px;border-bottom:1px solid #ddd;text-align:left}td:last-child,th:last-child{text-align:right}
+#status{min-height:1.5em}
+</style>
+</head>
+<body>
+<h1>Продажи по регионам</h1><p>Демонстрационные данные.</p>
+<form id="filters">
+<label>Регион<select id="region"><option value="">Все</option><option>Москва</option><option>Казань</option><option>Сочи</option></select></label>
+<label>Минимальная сумма<input id="min" type="number" min="0" step="1" value="0" required></label>
+<button type="submit">Применить</button><button type="reset">Сбросить</button>
+</form>
+<p id="status" aria-live="polite"></p>
+<table><thead><tr><th>Регион</th><th>Продажи</th></tr></thead><tbody id="rows"></tbody></table>
+<p id="total" aria-live="polite"></p>
+<script>
+const sales = [{region:"Москва",amount:120000},{region:"Казань",amount:80000},{region:"Сочи",amount:60000}];
+const form = document.querySelector("#filters");
+const region = document.querySelector("#region");
+const min = document.querySelector("#min");
+const rows = document.querySelector("#rows");
+const status = document.querySelector("#status");
+const total = document.querySelector("#total");
+function render(){
+  if(!form.checkValidity() || !Number.isFinite(min.valueAsNumber)){
+    status.textContent="Введите корректную сумму";return;
+  }
+  const selected=sales.filter(row=>(!region.value||row.region===region.value)&&row.amount>=min.valueAsNumber);
+  rows.replaceChildren();
+  for(const row of selected){
+    const tr=rows.insertRow();
+    tr.insertCell().textContent=row.region;
+    tr.insertCell().textContent=row.amount.toLocaleString("ru-RU");
+  }
+  status.textContent=selected.length ? "" : "Нет данных";
+  total.textContent="Итого: "+selected.reduce((s,row)=>s+row.amount,0).toLocaleString("ru-RU");
+}
+form.addEventListener("submit",event=>{event.preventDefault();render();});
+form.addEventListener("reset",()=>setTimeout(render,0));
+render();
+</script>
+</body></html>
